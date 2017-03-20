@@ -1,12 +1,15 @@
-# Twilio Chat App Starter
+ChatLib is a helper library to add chat functionality in Android app. The library provides all features that are essential in developing chat module in an application.
 
-This app can be used as a starter app with basic chat features. The app uses [Twilio SDK](https://www.twilio.com/) for chat integration therefore includes Utility classes for quick chat integration along with UI essentials required for Chat module.
+### Background
+In recent past, I came across many clients who wanted to have chat like feature in their apps. The goas was to develop a helper library that allows following:
+- A library that can be quickly added for chat based requirement (plug and play)
+- Easy to understand code and seamless integration
+- Enable integration with third party chat frameworks without changing much code
+- Ensure extensibility
 
-## What it includes?
-The project has follwing features:
+### What it includes?
+The library has follwing items that are required in any chat module:
   - Chat Bubbles
-  - Recylerview customized for chat list
-  - Chat sorting based on time
+  - General screen for chat list and messages
   - Support for textual chat and media (images).
-  - Chat filtering using Search bar
-  - Twilio helper classes for quick integration
+  - Chat list sorting based on recent time
