@@ -1,3 +1,4 @@
+# Android ChatLib (In Progress)
 ChatLib is a helper library to add chat functionality in Android app. The library provides all features that are essential in developing chat module in an application.
 
 ### Background
