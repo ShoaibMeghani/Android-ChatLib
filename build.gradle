@@ -19,7 +19,7 @@ allprojects {
     }
 
     ext {
-        androidApplicationId = 'com.smeghani.twiliohelper'
+        androidApplicationId = 'com.smeghani.chatlibexample'
         androidVersionCode = 1
         androidVersionName = "1.0"
     }
