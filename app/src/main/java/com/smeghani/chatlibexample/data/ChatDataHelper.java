@@ -1,6 +1,11 @@
 package com.smeghani.chatlibexample.data;
 
 import com.smeghani.chatlib.model.ChatItem;
+import com.smeghani.chatlib.model.MessageItem;
+import com.smeghani.chatlib.utils.MessageCreater;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -10,7 +15,9 @@ import java.util.ArrayList;
 
 public class ChatDataHelper {
 
-    public static ArrayList<ChatItem> getChatItemList(){
+    public static final String USERID = "abcd12";
+
+    public static ArrayList<ChatItem> getChatItemList() {
         ArrayList<ChatItem> chatItems = new ArrayList<>();
 
         ChatItem chatItem1 = new ChatItem();
@@ -43,5 +50,26 @@ public class ChatDataHelper {
         chatItems.add(chatItem3);
 
         return chatItems;
+    }
+
+    public static ArrayList<MessageItem> getMessageList() {
+
+        ArrayList<MessageItem> msgItems = new ArrayList<>();
+
+
+
+        msgItems.add(MessageCreater.createTextMsg(USERID,"hello","abc"));
+        msgItems.add(MessageCreater.createTextMsg("axc","hi","abc"));
+        return msgItems;
+    }
+
+    private static JSONObject getTextMsgObj(String text) {
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put("msg", text);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return jsonObject;
     }
 }

@@ -17,14 +17,19 @@ The library has follwing items that are required in any chat module:
 
 ### Usage
 ##### Chat List screen
-In order to add chat list screen screen to your app extend your fragment with `ChatListBaseFragment` and override methods to provide your own customised views/implementaiton.
-  - Return layout resource id of your fragment in `getChatLayoutResource`.
-  - To show chat list in listview, return listview id in `getListviewId`
+In order to add chat list screen to your app extend your fragment with `ChatListBaseFragment` and override methods to provide your own customised views/implementaiton.
+  - Return layout resource id of your fragment in `getChatLayoutResource()`.
+  - To show chat list in listview, return listview id in `getListviewId()`
   - You can also provide custom implementation of chat list adapter by extending your adapter with `ChatListBaseAdap`
 
+##### Chat Conversation screen
+To add message screen to your app extend your fragment with `ChatBaseFragment` and overried methods to provide customised implementation.
+  - Return layout resource id of your fragment in `getChatLayoutResource()`
+  - Message screen uses recycler view to show messages. Pass recycler view id in `getRecyclerViewId()`
+  - Extend your message adapter with `MessageListBaseAdap` for basic message list implementation.
+
 ### Todo
- - Add base implementation of message screen
- - Add proper documentation.
+ - Allowing customization using a config file instead of overriding whole adapters and methods.
 
 
 

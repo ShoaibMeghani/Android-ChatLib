@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:orientation="vertical">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lv_conversation"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="vertical" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/tv_typing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:text="--"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="15sp"
+        custom:typefaceAsset="fonts/MuseoSans_500_Italic.otf" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/et_background"
+            android:imeActionId="@+id/send"
+            android:imeActionLabel="send"
+            android:imeOptions="actionSend"
+            android:layout_marginBottom="-5dp"
+            android:layout_marginLeft="10dp"
+
+            android:paddingBottom="5dp"
+            android:textColor="@color/white"
+
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:singleLine="true" />
+
+        <LinearLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="4dp"
+
+            android:gravity="center"
+            android:padding="5dp">
+
+            <com.smeghani.chatlib.views.ChatAnimButton
+                android:id="@+id/btn_send_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:contentDescription="send"
+                android:scaleType="center"
+                app:first="@drawable/btn_send"
+                app:second="@drawable/btn_send" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

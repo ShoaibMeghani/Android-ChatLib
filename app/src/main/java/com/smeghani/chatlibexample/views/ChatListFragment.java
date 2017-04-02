@@ -33,7 +33,7 @@ public class ChatListFragment extends ChatListBaseFragment {
 
     @Override
     public void onChatListItemClick(ChatItem chatItem, int position) {
-
+        ((MainActivity)getActivity()).switchFragment(new MessageListFragment());
     }
 
     @Override

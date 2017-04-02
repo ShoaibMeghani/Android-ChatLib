@@ -1,6 +1,7 @@
 package com.smeghani.chatlibexample.views;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 
 import com.smeghani.chatlibexample.R;
@@ -18,5 +19,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container,new ChatListFragment()).commit();
+    }
+
+    public void switchFragment(Fragment fragment){
+        getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.container,fragment).commit();
     }
 }

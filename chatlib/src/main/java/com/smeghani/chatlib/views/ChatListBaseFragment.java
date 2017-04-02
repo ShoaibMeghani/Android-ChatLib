@@ -50,7 +50,7 @@ public abstract class ChatListBaseFragment extends Fragment implements AdapterVi
     }
 
     /*
-    * Provide chat fragment layout resource. It should have a listview to show user list.
+    * Provide chat list fragment layout resource. It should have a listview to show user list.
     * */
     public abstract int getChatLayoutResource();
 
@@ -68,10 +68,7 @@ public abstract class ChatListBaseFragment extends Fragment implements AdapterVi
     /*
     * Override this method to provide custom adapter.
     * */
-    public ChatListBaseAdap getChatAdapter() {
-        ChatListBaseAdap adap = new ChatListBaseAdap(getActivity(), 0, mChatList);
-        return adap;
-    }
+    public abstract ChatListBaseAdap getChatAdapter();
 
     public ArrayList<ChatItem> getChatList() {
         return mChatList;

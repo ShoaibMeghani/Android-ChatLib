@@ -31,5 +31,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile libDependencies.supportappcompat
+    compile libDependencies.recylerview
+
     testCompile libDependencies.junit
 }

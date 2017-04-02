@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TextViewWithFont">
+        <attr name="typefaceAsset" format="string" />
+    </declare-styleable>
+
+
+        <declare-styleable name="AnimButton">
+            <attr name="first" format="reference"/>
+            <attr name="second" format="reference"/>
+            <attr name="duration" format="integer"/>
+        </declare-styleable>
+
+
+
+
+
+
+</resources>

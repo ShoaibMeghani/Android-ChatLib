@@ -26,7 +26,7 @@ import java.util.List;
  * Created by smeghani on 3/21/2017.
  */
 
-public class ChatListBaseAdap extends ArrayAdapter<ChatItem> implements Filterable{
+public abstract class ChatListBaseAdap extends ArrayAdapter<ChatItem> implements Filterable{
 
     private Context mContext;
     private ArrayList<ChatItem> mChatList;
@@ -112,16 +112,12 @@ public class ChatListBaseAdap extends ArrayAdapter<ChatItem> implements Filterab
     /*
     * Override this method to show profile pic using any third party library you prefer.
     * **/
-    public void displayProfilePic(ImageView iv){
-        //let sub-class implement this
-    }
+    public abstract void displayProfilePic(ImageView iv);
 
     /**
      * User can provide custom unread badge count color.
      * */
-    public String getColorPrimaryHex(){
-        return "#FF0000";
-    }
+    public abstract String getColorPrimaryHex();
 
     @NonNull
     @Override
